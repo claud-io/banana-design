@@ -1,8 +1,21 @@
-export type ButtonType = "Primary" | "Base";
+export enum ButtonType {
+  Primary = "Primary",
+  Base = "Base",
+}
+
+export enum ButtonSize {
+  Small = "Small",
+  Base = "Base",
+  Large = "Large",
+}
+
+export type ButtonClasses<T extends string> = { [key in T]: string };
 
 export interface ButtonProps {
-  type: ButtonType;
   children: React.ReactNode;
+  size?: ButtonSize;
+  type?: ButtonType;
   className?: string;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  icon?: string;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }

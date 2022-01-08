@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Button from "./Button";
+import { ButtonSize, ButtonType } from "./types";
 
 export default {
   title: "Banana Design/Button",
@@ -18,8 +19,9 @@ const Template: ComponentStory<typeof Button> = (props) => (
   <Button {...props} />
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
-  type: "Primary",
+export const TextButton = Template.bind({});
+TextButton.args = {
+  type: ButtonType.Primary,
+  size: ButtonSize.Small,
   children: "Button",
 };
