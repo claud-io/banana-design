@@ -13,7 +13,7 @@ const Button = ({
     <button
       type="button"
       onClick={onClick}
-      className={`px-3 py-1 text-sm font-medium ${_className} `}
+      className={`px-3 py-1 text-sm font-medium ${_className}`}
     >
       {children}
     </button>
