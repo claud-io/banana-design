@@ -2,12 +2,12 @@ import React from "react";
 
 export enum ButtonType {
   Primary = "Primary",
-  Base = "Base",
+  Default = "Default",
 }
 
 export enum ButtonSize {
   Small = "Small",
-  Base = "Base",
+  Default = "Default",
   Large = "Large",
 }
 
@@ -15,17 +15,15 @@ export type ButtonClasses<T extends string> = { [key in T]: string };
 
 export interface RootButtonProps {
   children: React.ReactNode;
-  className?: string;
   icon?: React.ReactElement<any>;
-  onClick?: React.MouseEventHandler<HTMLElement>;
   type?: ButtonType;
+  size?: ButtonSize;
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
-export interface ButtonProps extends Omit<RootButtonProps, "icon"> {
-  size?: ButtonSize;
-}
+export interface ButtonProps extends Omit<RootButtonProps, "icon"> {}
 
-export interface IconButtonProps extends RootButtonProps {
-  size?: ButtonSize;
+export interface IconButtonProps extends Omit<RootButtonProps, "icon"> {
   icon: React.ReactElement<any>;
 }

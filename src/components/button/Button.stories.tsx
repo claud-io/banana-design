@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof Button> = (props) => <Button {...props} />
 
 export const Default = Template.bind({});
 Default.args = {
-  type: ButtonType.Base,
-  size: ButtonSize.Base,
+  type: ButtonType.Default,
+  size: ButtonSize.Default,
   children: "Button",
 };
