@@ -2,6 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Button from "./Button";
 import { ButtonSize, ButtonType } from "./types";
+import { HeartIcon } from "@heroicons/react/solid";
 
 export default {
   title: "Banana Design/Button",
@@ -19,4 +20,17 @@ Default.args = {
   type: ButtonType.Default,
   size: ButtonSize.Default,
   children: "Button",
+};
+
+export const IconButton = Template.bind({});
+IconButton.args = {
+  icon: <HeartIcon />,
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  type: ButtonType.Default,
+  size: ButtonSize.Default,
+  children: "Button",
+  icon: <HeartIcon />,
 };

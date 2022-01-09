@@ -18,7 +18,7 @@ export enum ButtonShape {
 
 export type ButtonClasses<T extends string> = { [key in T]: string };
 
-export interface RootButtonProps {
+export interface ButtonProps {
   bordered?: boolean;
   shape?: ButtonShape;
   children: React.ReactNode;
@@ -27,10 +27,4 @@ export interface RootButtonProps {
   size?: ButtonSize;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLElement>;
-}
-
-export interface ButtonProps extends Omit<RootButtonProps, "icon" | "shape"> {}
-
-export interface IconButtonProps extends Omit<RootButtonProps, "icon"> {
-  icon: React.ReactElement<any>;
 }
