@@ -7,21 +7,16 @@ export default {
   title: "Banana Design/Button",
   component: Button,
   argTypes: {
-    className: {
-      table: {
-        disable: true,
-      },
-    },
+    className: { table: { disable: true } },
+    onClick: { table: { disable: true } },
   },
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (props) => (
-  <Button {...props} />
-);
+const Template: ComponentStory<typeof Button> = (props) => <Button {...props} />;
 
-export const TextButton = Template.bind({});
-TextButton.args = {
-  type: ButtonType.Primary,
-  size: ButtonSize.Small,
+export const Default = Template.bind({});
+Default.args = {
+  type: ButtonType.Base,
+  size: ButtonSize.Base,
   children: "Button",
 };
