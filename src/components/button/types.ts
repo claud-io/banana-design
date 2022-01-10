@@ -16,7 +16,7 @@ export enum ButtonShape {
   Round = "Round",
 }
 
-export type ButtonClasses<T extends string> = { [key in T]: string };
+export type ButtonConfiguration<T extends string> = { [key in T]: string };
 
 export interface ButtonProps {
   bordered?: boolean;
