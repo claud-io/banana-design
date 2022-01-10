@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 export const typeClasses: ButtonConfiguration<ButtonType> = {
   Default: "text-gray-500 bg-white border-gray-300 hover:border-blue-400 hover:text-blue-500",
-  Primary: "text-white bg-primary border-primary-500 hover:text-white hover:bg-opacity-80",
+  Primary: "text-white bg-primary border-primary hover:text-white hover:bg-opacity-90",
 };
 export const sizeClasses: ButtonConfiguration<ButtonSize> = {
   Small: "px-2 py-0.5",
@@ -39,7 +39,7 @@ const Button = ({
       type="button"
       onClick={onClick}
       className={classNames(
-        "flex items-center gap-2 font-medium text-sm leading-6",
+        "flex items-center gap-2 font-medium text-sm leading-6 hover:shadow-sm",
         {
           border: bordered,
           "rounded-full": shape === ButtonShape.Round,
